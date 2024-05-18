@@ -128,3 +128,13 @@ $headerLogo = get_field('header_logo', 'option');
                     </div>
                 </div>
             </header>
+
+            <?php if (!is_front_page()){ ?> 
+                <div id="background_img" class="row mx-0">
+                    <div class="col-auto">
+                      <h1 class="text-white p-lg-5 py-4 px-2 display-4 fw-semibold my-5">
+                        About Us
+                      </h1>
+                    </div>
+                </div>
+            <?php } ?>
