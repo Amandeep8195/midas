@@ -40,8 +40,8 @@ $gallery = get_field('gallery');
                 <div class="row">
                     <div class="col-md-12 col-sm-12 px-5 pt-5 image-slider-text" id="imageSliderText">
                         <div class="row">
-                            <div class="container">
-                                <div class="col-md-8 col-sm-12 my-5 pt-5 padding-top-none-xs">
+                            <div class="container mt-lg-0 mt-4">
+                                <div class="col-md-8 col-sm-12 my-5 pt-lg-5 pt-4 padding-top-none-xs">
                                     <?php if($banner_slider){ ?> 
                                         <div class="slider-info slide-one-item owl-carousel">
                                             <?php foreach ($banner_slider as $value) { ?>
@@ -65,8 +65,8 @@ $gallery = get_field('gallery');
     </div>
 </section> 
 
-<section class="second">
-    <div class="mx-auto md:max-w-[1200px] md:w-7/10 xl:w-6/10 w-9/10 bg-gradient-to-b from-white to-[#F0E9F8] absolute flex flex-col z-100 md:top-[650px] top-[620px] rounded-10 py-8 left-0 right-0">
+<section class="second position-relative">
+    <div class="mx-auto md:max-w-[1200px] md:w-7/10 xl:w-6/10 w-9/10 bg-gradient-to-b from-white to-[#F0E9F8] absolute flex flex-col z-100 md:top-[650px] top-[620px] rounded-10 py-8 left-0 right-0 hero-top-60">
         <div class="md:w-8/10 w-9/10 mx-auto">
             <div class="flex">
                 <?php if($study_tag){ ?>
@@ -80,10 +80,12 @@ $gallery = get_field('gallery');
             <?php if($study_heading){ ?> 
             <p class="md:text-font32 font-bold text-font24 text-black mx-auto mt-2"><?php echo $study_heading; ?></p>
             <?php } ?>
-            <div class="flex w-full justify-between items-center mt-4">
+            <div class="row mx-0 flex w-full justify-between items-center mt-4">
                 <?php if($study_image){ ?> 
                     <?php foreach ($study_image as $value) { ?>
-                         <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
+                         <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"
+                         class="col-auto mt-lg-0 mt-3"
+                         >
                             <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
                                 <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27148%27%20height=%2758%27/%3e"/>
                             </span>
@@ -100,11 +102,11 @@ $gallery = get_field('gallery');
     <!-- </div> -->
 </section>
 
-<section class="site-section mt-3 px-5 md:relative top-[220px] md:mb-[168px] z-100" id="about-section">
-    <div class="container">
+<section class="site-section mt-5 pt-lg-0 pt-5 px-5 md:relative top-[220px] md:mb-[168px] z-100" id="about-section">
+    <div class="container mt-lg-0 mt-5 pt-lg-0 pt-5">
         <?php if($welcome_content){ ?> 
-            <div class="row">
-                <div class="col-md-7 mr-auto mb-5">
+            <div class="row mt-lg-0 mt-5">
+                <div class="col-md-7 mr-auto mb-5 mt-lg-0 mt-5 pt-lg-0 pt-5">
                     <?php if($welcome_content['heading']){ ?> 
                         <h2 class="text-black mb-4"><?php echo $welcome_content['heading']; ?></h2>
                     <?php } ?>

@@ -19,7 +19,7 @@ $location = $location_section['location'];
 $footer_logo = get_field('footer_logo','option');
 $footer_logo_text = get_field('footer_logo_text','option');
 ?>
-
+        <?php if(!is_page(168)) { ?> 
             <?php if($footerContact){ ?> 
                 <div class="site-section" id="contact-section">
                     <div class="container">
@@ -38,7 +38,7 @@ $footer_logo_text = get_field('footer_logo_text','option');
                     </div>
                 </div>    
             <?php } ?>
-            
+        <?php }?>
             <footer class="site-footer bg-primary">
                 <div class="container">
                     <div class="row">

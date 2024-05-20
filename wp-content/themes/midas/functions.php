@@ -889,3 +889,12 @@ function create_posttype() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
+
+/* */
+
+add_filter( 'wpcf7_form_class_attr', 'custom_custom_form_class_attr' );
+
+function custom_custom_form_class_attr( $class ) {
+  $class .= ' card p-4 border-0 shadow border-radius-4';
+  return $class;
+}
