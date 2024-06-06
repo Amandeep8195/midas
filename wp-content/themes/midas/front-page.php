@@ -244,7 +244,7 @@ $gallery = get_field('gallery');
                                                     style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
                                                     <?php if($value['images']['url']){ ?> 
                                                     <img
-                                                        style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0"
+                                                        style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;border-radius:10px;margin:0;padding:0"
                                                         alt="" aria-hidden="true"
                                                         src="<?php echo $value['images']['url']; ?>">
                                                     <?php } ?>

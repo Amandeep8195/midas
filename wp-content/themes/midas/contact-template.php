@@ -61,62 +61,7 @@ $contact_us = get_field('contact_us');
             <?php } ?>
 
             <div class="col-lg-5 col-12">
-
-
                 <?php echo do_shortcode('[contact-form-7 id="3e97ca4" title="Contact Us form"]'); ?>
-              <!-- <form action="" class="card p-4 border-0 shadow rounded-4">
-                <h3 class="mb-1">Get in Touch</h3>
-                <span class="text-secondary small"
-                  >You can reach us everytime</span
-                >
-                <div class="d-flex gap-3 mt-4">
-                  <div class="w-50">
-                    <input
-                      type="text"
-                      class="form-control rounded-pill contact-input"
-                      placeholder="Full name"
-                    />
-                  </div>
-                  <div class="w-50">
-                    <input
-                      type="text"
-                      class="form-control rounded-pill contact-input"
-                      placeholder="Phone"
-                    />
-                  </div>
-                </div>
-                <div class="d-flex mt-3">
-                  <div class="w-100">
-                    <input
-                      type="text"
-                      class="form-control rounded-pill contact-input"
-                      placeholder="Email Address"
-                    />
-                  </div>
-                </div>
-                <div class="d-flex mt-3">
-                  <div class="w-100">
-                    <input
-                      type="text"
-                      class="form-control rounded-pill contact-input"
-                      placeholder="Subject"
-                    />
-                  </div>
-                </div>
-                <div class="d-flex mt-3">
-                  <div class="w-100">
-                    <textarea
-                      id=""
-                      rows="5"
-                      class="form-control rounded-4 contact-input"
-                      placeholder="How can we help?"
-                    ></textarea>
-                  </div>
-                </div>
-                <button class="btn btn-primary rounded-pill mt-3">
-                  Submit
-                </button>
-              </form> -->
             </div>
           </div>
         </div>
