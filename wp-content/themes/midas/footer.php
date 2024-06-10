@@ -51,7 +51,7 @@ $footer_logo_text = get_field('footer_logo_text','option');
                                         'menu_class'           => 'list-unstyled', ) ); 
                             ?>
                         </div>
-                        <div class="col-md-3 col-xs-12">
+                        <div class="col-md-2 col-xs-12">
                             <?php if($follow_us_section){ ?> 
                                 <div class="mb-4">
                                     <?php if($follow_us_section['follow_us_heading']){ ?> 
@@ -75,8 +75,17 @@ $footer_logo_text = get_field('footer_logo_text','option');
                                 </div>
                             <?php } ?> 
                         </div>
-                        <div class="col-md-1 col-xs-12"></div>
-                        <div class="col-md-6 col-xs-12">
+                        <div class="col-md-2 col-xs-12">
+                            <h2 class="footer-heading mb-4">Visa</h2>
+                            <?php
+                                wp_nav_menu( array( 
+                                        'theme_location' => 'visa',
+                                        'container'            => 'ul',
+                                        'menu_class'           => 'list-unstyled', ) ); 
+                            ?>
+                        </div>
+                        
+                        <div class="col-md-5 col-xs-12">
                             <div class="mb-5">
                                 <?php if($location_section['location_heading']){ ?> 
                                     <h2 class="footer-heading mb-3"><?php echo $location_section['location_heading']; ?></h2>
@@ -93,6 +102,7 @@ $footer_logo_text = get_field('footer_logo_text','option');
                                 <?php } ?>
                             </div>
                         </div>
+
                         <div class="col-md-12 col-xs-12">
                             <p><a href="index.php" class="text-warning" style="font-size:18px;"><img src="<?php echo $footer_logo['url']; ?>" alt="logo" height="20"> Midas Touch</a> <?php echo $footer_logo_text; ?></p>
                         </div>
@@ -111,6 +121,27 @@ $footer_logo_text = get_field('footer_logo_text','option');
         </div> 
         <!-- .site-wrap -->
 
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <!--         <h4 class="modal-title">Modal Header</h4> -->
+      </div>
+      <div class="modal-body text-center">
+        <h1>Full screen Transparent Bootstrap Modal</h1>
+        <p>FEEL FRREE TO GET YOUR MODAL CODE HERE FOLKS.</p>
+        <a class="pre-order-btn" href="#">GET THE MODAL CODE</a>
+      </div>
+      <div class="modal-footer">
+        <!--         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+      </div>
+    </div>
+
+  </div>
+</div>
         
         
         <script type="text/javascript">
@@ -127,6 +158,11 @@ $footer_logo_text = get_field('footer_logo_text','option');
             //         // jQuery('#imageSliderText').css('background-image','url(http://localhost/Midas/wp-content/uploads/2024/05/slide-'+counter+'.jpg)');
             //     }, 5000);
             // });
+
+
+   //          $(document).ready(function(){       
+   // $('#myModal').modal('show');
+   //  }); 
         </script>
 
 <?php

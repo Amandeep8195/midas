@@ -130,7 +130,13 @@ $headerLogo = get_field('header_logo', 'option');
             </header>
 
             <?php if (!is_front_page()){ ?> 
-                <div id="background_img" class="row mx-0">
+                 <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                <?php if($image){ ?>
+                    <div id="background_img" class="row mx-0" style="background-image: url('<?php echo $image[0]; ?>');">
+                <?php }else{ ?> 
+                    <div id="background_img" class="row mx-0" style="background-image: url('http://localhost/Midas/wp-content/uploads/2024/06/about-bg-img.png');" >
+                <?php } ?>
+                
                     <div class="col-auto p-5 mt-3">
                       <h1 class="text-white p-lg-5 py-4 px-2 display-4 fw-semibold my-5">
                         <?php echo get_the_title(); ?>

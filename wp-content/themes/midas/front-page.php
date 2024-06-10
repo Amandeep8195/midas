@@ -19,9 +19,16 @@ $why_us_content = get_field('why_us_content');
 $application_heading = get_field('application_heading');
 $application_images = get_field('application_images');
 
+$certificateheading = get_field('certificateheading');
+$certificate_images = get_field('certificate_images');
+
+$star_performers_heading = get_field('star_performers_heading');
+$star_performers_images = get_field('star_performers_images');
+
 $faq_heading = get_field('faq_heading');
 $faq_subheading = get_field('faq_subheading');
 $faq_content = get_field('faq_content');
+$faq_content_right = get_field('faq_content_right');
 
 $review_heading = get_field('review_heading');
 $review_content = get_field('review_content');
@@ -53,7 +60,7 @@ $gallery = get_field('gallery');
                                         </div>
                                     <?php } ?>
                                     <?php if($banner_button['url']){ ?> 
-                                        <a href="<?php echo $banner_button['url'] ?>" class="btn btn-warning px-5 py-3 text-white smoothscroll"><?php echo $banner_button['title']; ?></a>
+                                        <a href="<?php echo $banner_button['url'] ?>" class="btn btn-warning px-5 py-3  smoothscroll"><?php echo $banner_button['title']; ?></a>
                                     <?php } ?>
                                 </div>
                             </div>
@@ -65,56 +72,21 @@ $gallery = get_field('gallery');
     </div>
 </section> 
 
-<section class="second position-relative">
-    <div class="mx-auto md:max-w-[1200px] md:w-7/10 xl:w-6/10 w-9/10 bg-gradient-to-b from-white to-[#F0E9F8] absolute flex flex-col z-100 md:top-[650px] top-[620px] rounded-10 py-8 left-0 right-0 hero-top-60">
-        <div class="md:w-8/10 w-9/10 mx-auto">
-            <div class="flex">
-                <?php if($study_tag){ ?>
-                    <?php foreach ($study_tag as $value) { ?>
-                        <div class="bg-[#E2F9DF] px-2 py-1 w-fit ml-2 rounded-3">
-                            <p class="text-[#3C9860] text-font14 font-normal"><?php echo $value['tags']; ?></p>
-                        </div>
-                    <?php } ?>
-                <?php } ?>
-            </div>
-            <?php if($study_heading){ ?> 
-            <p class="md:text-font32 font-bold text-font24 text-black mx-auto mt-2"><?php echo $study_heading; ?></p>
-            <?php } ?>
-            <div class="row mx-0 flex w-full justify-between items-center mt-4">
-                <?php if($study_image){ ?> 
-                    <?php foreach ($study_image as $value) { ?>
-                         <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"
-                         class="col-auto mt-lg-0 mt-3"
-                         >
-                            <span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
-                                <img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27148%27%20height=%2758%27/%3e"/>
-                            </span>
-                            <img
-                                    alt="investor-logo" src="<?php echo $value['image']['url']; ?>" decoding="async" data-nimg="intrinsic" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover"
-                                />
-                        </span>
-                    <?php } ?>
-                <?php } ?>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="relative mx-auto"> -->
-    <!-- </div> -->
-</section>
 
-<section class="site-section mt-5 pt-lg-0 pt-5 px-5 md:relative top-[220px] md:mb-[168px] z-100" id="about-section">
+
+<section class="site-section mt-5 pt-lg-0 pt-5 px-5 md:relative top-[100px] md:mb-[168px] z-100" id="about-section">
     <div class="container mt-lg-0 mt-5 pt-lg-0 pt-5">
         <?php if($welcome_content){ ?> 
-            <div class="row mt-lg-0 mt-5">
-                <div class="col-md-7 mr-auto mb-5 mt-lg-0 mt-5 pt-lg-0 pt-5">
+            <div class="row mt-lg-0 mt-5 align-items-center">
+                <div class="col-md-7 mr-auto mb-lg-0 mb-5 mt-lg-0 mt-5 pt-lg-0 pt-5">
                     <?php if($welcome_content['heading']){ ?> 
-                        <h2 class="text-black mb-4"><?php echo $welcome_content['heading']; ?></h2>
+                        <h2 class="text-black mb-4 text-uppercase font-bold"><?php echo $welcome_content['heading']; ?></h2>
                     <?php } ?>
                     <?php if($welcome_content['paragraph']){ ?> 
                         <?php echo $welcome_content['paragraph']; ?>
                     <?php } ?>
                     <?php if($welcome_content['button']['url']){ ?> 
-                        <a class="btn btn-primary text-bold" href="<?php echo $welcome_content['button']['url']; ?>"><?php echo $welcome_content['button']['title']; ?></a>
+                        <a class="btn btn-primary text-bold mt-3" href="<?php echo $welcome_content['button']['url']; ?>"><?php echo $welcome_content['button']['title']; ?></a>
                     <?php } ?>
                     
                 </div>
@@ -142,7 +114,7 @@ $gallery = get_field('gallery');
                     <?php echo $services_heading; ?>
                 </h2>
             <?php } ?>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 max-w-[370px] md:max-w-[880px] m-auto mt-8 nonloop-block-13 owl-style owl-style-md owl-carousel">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 max-w-[370px] md:max-w-[880px] m-auto mt-8 service-slider owl-style owl-style-md owl-carousel">
 
             <?php
                 $args = array(
@@ -166,7 +138,7 @@ $gallery = get_field('gallery');
                                         sizes="100vw"
                                         ></span>
                             </div>
-                            <h3 class="text-xs font-bold md:text-font22"><?php echo get_the_title(); ?></h3>
+                            <h3 class="text-xs font-bold md:text-font22 text-center"><?php echo get_the_title(); ?></h3>
                         </div>
                         <div
                             class="shrink-0 md:bg-transparent w-6 md:w-fit h-6 md:h-fit flex items-center justify-center rounded-half self-end md:self-center">
@@ -187,7 +159,7 @@ $gallery = get_field('gallery');
         <div class="row justify-content-center">
             <div class="col-lg-6 text-center mb-5">
                 <?php if($why_choose_heading){ ?> 
-                    <h2 class="text-black mb-2"><?php echo $why_choose_heading; ?></h2>
+                    <h2 class="text-black mb-2 text-uppercase font-bold"><?php echo $why_choose_heading; ?></h2>
                 <?php } ?>
                 <?php if($why_choose_sub_heading){ 
                     echo $why_choose_sub_heading;
@@ -201,10 +173,11 @@ $gallery = get_field('gallery');
                         <div class="card blog-entry p-3 midas-touch-card">
                             <?php if($value['image']){ ?> 
                                 <figure>
+
                                     <img src="<?php echo $value['image']['url']; ?>" alt="Image" class="img-fluid">
                                 </figure>
                             <?php } ?>
-                            <div class="blog-entry-text">
+                            <div class="blog-entry-text mt-3">
                                 <?php if($value['heading']){ ?> 
                                     <h3><?php $value['heading']; ?></h3>
                                 <?php } ?>
@@ -238,20 +211,8 @@ $gallery = get_field('gallery');
                                     <div tabindex="-1" style="width:100%;display:inline-block">
                                         <div
                                             class="w-[290px] h-[286px] md:w-[280px] md:h-[430px] mx-auto mb-[20px] md:mb-0">
-                                            <span
-                                                style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
-                                                <span
-                                                    style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
-                                                    <?php if($value['images']['url']){ ?> 
-                                                    <img
-                                                        style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;border-radius:10px;margin:0;padding:0"
-                                                        alt="" aria-hidden="true"
-                                                        src="<?php echo $value['images']['url']; ?>">
-                                                    <?php } ?>
-
-                                                </span>
-                                                
-                                            </span>
+                                            <p><iframe width="250" height="450" src="https://www.youtube.com/embed/<?php echo $value['youtube_shorts'] ?>" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen><br>Powered by <a href="https://youtubeembedcode.com">how to embed a youtube video</a> and <a href="https://xn--sms-ln-utan-uc-pib.se/">nya sms lån utan uc</a></iframe></p>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -264,26 +225,63 @@ $gallery = get_field('gallery');
     </div>
 </section>
 
-<section class="site-section mt-3 bg-violet-150" id="faq-section">
+
+
+<section>
+    <div class="w-full p-[30px] md:p-[60px]">
+        <div class="max-w-row mx-auto text-white">
+            <div class="flex mb-8 items-center">
+                <?php if($application_heading){ ?> 
+                    <h2 class="text-[22px] text-black md:text-[32px] font-bold grow text-center"><?php echo $certificateheading; ?></h2>
+                <?php } ?>
+            </div>
+            <div class="slick-slider slick-initialized" dir="ltr">
+                <div class="slick-list">
+                    <div class="nonloop-block-13 owl-style owl-style-md owl-carousel">
+                        <?php foreach ($certificate_images as $value) { ?>
+                            <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true"
+                            style="outline: none; width: 288px;">
+                                <div>
+                                    <div tabindex="-1" style="width:100%;display:inline-block">
+                                        <div
+                                            class="w-[290px] h-[286px] md:w-[280px] md:h-[430px] mx-auto mb-[20px] md:mb-0">
+                                            <p><img src="<?php echo $value['images']['url']; ?>"></p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="site-section bg-violet-150" id="faq-section">
     <div class="container">
         <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
                 <h2 class="text-uppercase"><?php echo $faq_heading; ?></h2>
-                <p><?php echo $faq_subheading; ?></p>
+                <p class="mt-2"><?php echo $faq_subheading; ?></p>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 mb-4">
+            <div class="col-md-6 mb-4">
                 <div class="accordion" id="faqAccordion">
                     <?php $i = 1; ?>
                     <?php foreach ($faq_content as $value) { ?>
-                        <div class="card border-0 bg-transparent">
-                            <div class="card-header border-bottom bg-transparent" id="heading-<?php echo $i; ?>">
+                        <div class="card">
+                            <div class="card-header d-flex justify-between align-items-center" id="heading-<?php echo $i; ?>">
                                 <h5 class="font-size" type="button" data-toggle="collapse" data-target="#collapse-<?php echo $i; ?>" aria-expanded="false" aria-controls="collapseOne"><?php echo $value['question']; ?></h5>
+                                <img src="http://localhost/Midas/wp-content/uploads/2024/06/arrow-down.png" width="14"/>
                             </div>
                     
                             <div id="collapse-<?php echo $i; ?>" class="collapse" aria-labelledby="heading-<?php echo $i; ?>" data-parent="#faqAccordion">
-                                <div class="card-body">
+                                <div class="card-body px-0">
                                     <?php echo $value['answer']; ?>
                                 </div>
                             </div>
@@ -294,47 +292,61 @@ $gallery = get_field('gallery');
                     } ?>
                 </div>
             </div>
+            <div class="col-md-6 mb-4">
+                <div class="accordion" id="faqAccordion">
+                    <?php $j = 100; ?>
+                    <?php foreach ($faq_content_right as $value) { ?>
+                        <div class="card">
+                            <div class="card-header d-flex justify-between align-items-center" id="heading-<?php echo $j; ?>">
+                                <h5 class="font-size" type="button" data-toggle="collapse" data-target="#collapse-<?php echo $j; ?>" aria-expanded="false" aria-controls="collapseOne"><?php echo $value['question']; ?></h5>
+                                <img src="http://localhost/Midas/wp-content/uploads/2024/06/arrow-down.png" width="14"/>
+                            </div>
+                    
+                            <div id="collapse-<?php echo $j; ?>" class="collapse" aria-labelledby="heading-<?php echo $j; ?>" data-parent="#faqAccordion">
+                                <div class="card-body px">
+                                    <?php echo $value['answer']; ?>
+                                </div>
+                            </div>
+                        </div>
+
+                    <?php
+                    $j++;
+                    } ?>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="site-section mt-3" id="testimonials-section">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 text-center mb-5">
-                <h2 class="text-black mb-2"><?php echo $review_heading; ?> </h2>
-            </div>
-        </div>
-        <div>
-            <div class="owl-carousel owl-style owl-carousel-one no-owl-nav">
-                <?php foreach ($review_content as $value) { ?>
-                    <div>
-                        <div class="block-testimony-1 text-center">
-                            <blockquote class="mb-4">
-                                <?php echo $value['review']; ?>
-                            </blockquote>
-                        </div>
-                    </div> 
+
+<section>
+    <div class="w-full p-[30px] md:p-[60px]">
+        <div class="max-w-row mx-auto text-white">
+            <div class="flex mb-8 items-center">
+                <?php if($star_performers_heading){ ?> 
+                    <h2 class="text-[22px] text-black md:text-[32px] font-bold grow text-center"><?php echo $star_performers_heading; ?></h2>
                 <?php } ?>
             </div>
-        </div>
-    </div>
-</section>   
-     
-<section class="site-section mt-3" id="social-section">
-    <div class="md:max-w-[1200px] md:px-4 md:m-auto mb-[70px] md:pb-[80px] md:pt-4">
-        <h2 class="font-bold text-[24px] md:text-[36px] mt-8 md:mt-0 text-center px-8 md:px-0 mb-8"><?php echo $communities_heading; ?></h2>
-        <div class="m-auto flex flex-wrap gap-6 justify-center md:nowrapjustify-evenly">
-                <?php foreach ($communities as $value) { ?>
-                   <div class="bg-[#F5F4EA] w-40 md:w-240 h-[144px] rounded-md py-4 pl-4 relative">
-                        <span style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%"><span style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%"><img style="display:block;max-width:100%;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0" alt="" aria-hidden="true" src="<?php echo $value['logo']['url']; ?>"/></span>
-                        </span>
-                        <div class="mt-2 absolute bottom-20">
-                            <p class="font-bold text-2xl md:text-3xl"><?php echo $value['number']; ?><span class="absolute bottom-[19px] ">+</span></p>
-                            <p class="text-base md:text-xl font-extralight leading-4"><?php echo $value['title']; ?></p>
-                        </div>
+            <div class="slick-slider slick-initialized" dir="ltr">
+                <div class="slick-list">
+                    <div class="nonloop-block-13 owl-style owl-style-md owl-carousel">
+                        <?php foreach ($star_performers_images as $value) { ?>
+                            <div data-index="0" class="slick-slide mx-auto" tabindex="-1" aria-hidden="true"
+                            style="outline: none; width: 288px;">
+                                <div>
+                                    <div tabindex="-1" style="width:100%;display:inline-block">
+                                        <div
+                                            class="w-[290px] h-[286px] md:w-[280px] md:h-[430px] mx-auto mb-[20px] md:mb-0">
+                                            <p><img src="<?php echo $value['images']['url']; ?>"></p>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
                     </div>
-                <?php } ?>  
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -348,7 +360,12 @@ $gallery = get_field('gallery');
         </div>
         <div class="nonloop-block-13 owl-style owl-style-md owl-carousel">
             <?php foreach ($gallery as $value) { ?>
-                <a href="<?php echo $gallery_url; ?>"><div class="gallery-image" style="background-image: url('<?php echo $value['images']['url'] ?>');"></div></a>
+                <div class="performer-card mx-auto">
+                    <span class="study_visa">Study Visa</span>
+                    <!-- <span class="tourist_visa">Tourist Visa</span> -->
+                    <p class="my-1 text-black">Gulshan</p>
+                    <div class="gallery-image" style="background-image: url('<?php echo $value['images']['url'] ?>');"></div>
+                </div>
             <?php } ?>
         </div>
     </div>

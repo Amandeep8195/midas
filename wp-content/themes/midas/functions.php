@@ -864,6 +864,7 @@ if( function_exists('acf_add_options_page') ) {
 function wpb_custom_new_menu() {
 	register_nav_menu('header',__( 'Header' ));
 	register_nav_menu('footer',__( 'Footer' ));
+	register_nav_menu('visa',__( 'Visa' ));
   }
   add_action( 'init', 'wpb_custom_new_menu' );
 
@@ -891,6 +892,30 @@ function create_posttype() {
 add_action( 'init', 'create_posttype' );
 
 /* */
+
+/* visa custom post type */
+
+function visa_posttype() {
+  
+    register_post_type( 'visa',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Visa' ),
+                'singular_name' => __( 'Visa' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'visa'),
+            'show_in_rest' => true,
+  
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'visa_posttype' );
+
+/* */ 
 
 add_filter( 'wpcf7_form_class_attr', 'custom_custom_form_class_attr' );
 

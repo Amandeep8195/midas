@@ -27,7 +27,7 @@ $image_slider = get_field('image_slider');
                                                     style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
                                                     <?php if($value['images']['url']){ ?> 
                                                     <img
-                                                        style="display:block;max-width:100%;width:250px;height:initial;background:none;opacity:1;border:0;border-radius:10px;margin:0;padding:0"
+                                                        style="display:block;max-width:100%;object-fit: cover;object-position: top; width:250px;height:initial;background:none;opacity:1;border:0;border-radius:10px;margin:0;padding:0"
                                                         alt="" aria-hidden="true"
                                                         src="<?php echo $value['images']['url']; ?>">
                                                     <?php } ?>
