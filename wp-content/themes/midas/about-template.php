@@ -19,7 +19,7 @@ $founder_ceo_second = get_field('founder_ceo_second');
             <div class="row mx-0 mb-lg-0 mb-2">
               <div class="col-12">
                 <div class="text-start">
-                  <p class="small mb-0 fw-semibold text_black"><?php echo $about_us_section['pre_heading']; ?></p>
+                  <p class="mb-0"><?php echo $about_us_section['pre_heading']; ?></p>
                   <h1 class="fw-bolder primary-color display-4"><?php echo $about_us_section['heading']; ?></h1>
                 </div>
               </div>
@@ -52,7 +52,7 @@ $founder_ceo_second = get_field('founder_ceo_second');
               </div>
               <div class="col-lg col-12">
                 <div class="">
-                  <p class="fs-7 mb-0 fw-semibold"><?php echo $founder_ceo['pre_heading']; ?></p>
+                  <p class="mb-0 fw-semibold"><?php echo $founder_ceo['pre_heading']; ?></p>
                   <h1 class="fw-bolder primary-color display-5">
                     <?php echo $founder_ceo['heading']; ?>
                   </h1>
@@ -72,9 +72,9 @@ $founder_ceo_second = get_field('founder_ceo_second');
                   alt=""
                 />
               </div>
-              <div class="col-lg col-12 text_align_end">
+              <div class="col-lg col-12">
                 <div class="">
-                  <p class="fs-7 mb-0 fw-semibold"><?php echo $founder_ceo_second['pre_heading']; ?></p>
+                  <p class="mb-0 fw-semibold"><?php echo $founder_ceo_second['pre_heading']; ?></p>
                   <h1 class="fw-bolder primary-color display-5"><?php echo $founder_ceo_second['heading']; ?></h1>
                 </div>
                 <?php echo $founder_ceo_second['content']; ?>

@@ -72,13 +72,11 @@ $gallery = get_field('gallery');
     </div>
 </section> 
 
-
-
-<section class="site-section mt-5 pt-lg-0 pt-5 px-5 md:relative top-[100px] md:mb-[168px] z-100" id="about-section">
-    <div class="container mt-lg-0 mt-5 pt-lg-0 pt-5">
+<section class="site-section mt-5 pt-lg-0 pt-5 px-5 md:relative z-100" id="about-section">
+    <div class="container ">
         <?php if($welcome_content){ ?> 
-            <div class="row mt-lg-0 mt-5 align-items-center">
-                <div class="col-md-7 mr-auto mb-lg-0 mb-5 mt-lg-0 mt-5 pt-lg-0 pt-5">
+            <div class="row align-items-center">
+                <div class="col-md-7 mr-auto">
                     <?php if($welcome_content['heading']){ ?> 
                         <h2 class="text-black mb-4 text-uppercase font-bold"><?php echo $welcome_content['heading']; ?></h2>
                     <?php } ?>
@@ -90,7 +88,7 @@ $gallery = get_field('gallery');
                     <?php } ?>
                     
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-5 mt-lg-0 mt-3">
                     <div class="about-image-block">
                         <div class="image-box text-center mt-3">
                             <?php if($welcome_content['image']){ ?> 
@@ -126,8 +124,9 @@ $gallery = get_field('gallery');
                     $loop->the_post();
                     ?>
                      <div
-                    class="max-w-180 lg:min-w-[272px] md:min-w-220 h-20 md:h-52 bg-pink-gradient flex justify-between md:flex-col items-center rounded-10 py-2 px-4 md:pt-8 md:pb-7 cursor-pointer">
-                        <div class="flex flex-col justify-between md:items-center">
+                    class="service-content max-w-180 lg:min-w-[272px] md:min-w-220 h-20 md:h-52 bg-pink-gradient flex justify-between md:flex-col items-center rounded-10 py-2 px-4 md:pt-8 md:pb-7 cursor-pointer mx-auto">
+                    <a href="<?php echo get_the_permalink(); ?>"></a>
+                        <div class="flex flex-col justify-between align-items-center">
                             <div class="w-35px md:w-73 md:mb-[6px]"><span
                                     style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
                                         style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:100%"></span><img
@@ -157,7 +156,7 @@ $gallery = get_field('gallery');
 <section class="site-section mt-3" id="feature-section">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6 text-center mb-5">
+            <div class="col-lg-6 text-lg-center text-start mb-lg-5 mb-0">
                 <?php if($why_choose_heading){ ?> 
                     <h2 class="text-black mb-2 text-uppercase font-bold"><?php echo $why_choose_heading; ?></h2>
                 <?php } ?>
@@ -205,12 +204,12 @@ $gallery = get_field('gallery');
                 <div class="slick-list">
                     <div class="nonloop-block-13 owl-style owl-style-md owl-carousel">
                         <?php foreach ($application_images as $value) { ?>
-                            <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true"
+                            <div data-index="0" class="slick-slide mx-auto" tabindex="-1" aria-hidden="true"
                             style="outline: none; width: 288px;">
-                                <div>
-                                    <div tabindex="-1" style="width:100%;display:inline-block">
+                                <div class="d-flex justify-center">
+                                    <div class="d-flex justify-center" tabindex="-1" style="width:100%;display:inline-block">
                                         <div
-                                            class="w-[290px] h-[286px] md:w-[280px] md:h-[430px] mx-auto mb-[20px] md:mb-0">
+                                            class="w-[290px] h-[286px] md:w-[269px] md:h-[430px] d-flex justify-center mb-[20px] md:mb-0">
                                             <p><iframe width="250" height="450" src="https://www.youtube.com/embed/<?php echo $value['youtube_shorts'] ?>" title="" frameBorder="0"   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen><br>Powered by <a href="https://youtubeembedcode.com">how to embed a youtube video</a> and <a href="https://xn--sms-ln-utan-uc-pib.se/">nya sms lån utan uc</a></iframe></p>
                                             
                                         </div>
@@ -239,7 +238,7 @@ $gallery = get_field('gallery');
                 <div class="slick-list">
                     <div class="nonloop-block-13 owl-style owl-style-md owl-carousel">
                         <?php foreach ($certificate_images as $value) { ?>
-                            <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true"
+                            <div data-index="0" class="slick-slide mx-auto" tabindex="-1" aria-hidden="true"
                             style="outline: none; width: 288px;">
                                 <div>
                                     <div tabindex="-1" style="width:100%;display:inline-block">
@@ -263,7 +262,7 @@ $gallery = get_field('gallery');
 
 <section class="site-section bg-violet-150" id="faq-section">
     <div class="container">
-        <div class="row mb-5 justify-content-center">
+        <div class="row mb-lg-5 mb-0 justify-content-center">
             <div class="col-md-7 text-center">
                 <h2 class="text-uppercase"><?php echo $faq_heading; ?></h2>
                 <p class="mt-2"><?php echo $faq_subheading; ?></p>
@@ -303,7 +302,7 @@ $gallery = get_field('gallery');
                             </div>
                     
                             <div id="collapse-<?php echo $j; ?>" class="collapse" aria-labelledby="heading-<?php echo $j; ?>" data-parent="#faqAccordion">
-                                <div class="card-body px">
+                                <div class="card-body px-0">
                                     <?php echo $value['answer']; ?>
                                 </div>
                             </div>
@@ -320,7 +319,7 @@ $gallery = get_field('gallery');
 
 
 <section>
-    <div class="w-full p-[30px] md:p-[60px]">
+    <div class="w-full p-[30px] md:p-[50px]">
         <div class="max-w-row mx-auto text-white">
             <div class="flex mb-8 items-center">
                 <?php if($star_performers_heading){ ?> 
@@ -336,7 +335,7 @@ $gallery = get_field('gallery');
                                 <div>
                                     <div tabindex="-1" style="width:100%;display:inline-block">
                                         <div
-                                            class="w-[290px] h-[286px] md:w-[280px] md:h-[430px] mx-auto mb-[20px] md:mb-0">
+                                            class=" mx-auto">
                                             <p><img src="<?php echo $value['images']['url']; ?>"></p>
                                             
                                         </div>
@@ -361,9 +360,9 @@ $gallery = get_field('gallery');
         <div class="nonloop-block-13 owl-style owl-style-md owl-carousel">
             <?php foreach ($gallery as $value) { ?>
                 <div class="performer-card mx-auto">
-                    <span class="study_visa">Study Visa</span>
+                    <span class="study_visa"><?php echo $value['visa']; ?></span>
                     <!-- <span class="tourist_visa">Tourist Visa</span> -->
-                    <p class="my-1 text-black">Gulshan</p>
+                    <p class="my-1 text-black"><?php echo $value['name']; ?></p>
                     <div class="gallery-image" style="background-image: url('<?php echo $value['images']['url'] ?>');"></div>
                 </div>
             <?php } ?>

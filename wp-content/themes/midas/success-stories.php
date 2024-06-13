@@ -4,48 +4,38 @@
  *
  */
 get_header();
-$image_slider = get_field('image_slider');
+$success_stories = get_field('success_stories');
 ?>
 
+<div class="success-section site-section  bg-violet-150">
+    <div class="tab-container container mb-10 mx-auto rounded-sm flex flex-col items-center justify-center text-slate-200 md:space-x-5 md:flex-row tab-div">
 
-<section>
-    <div class="w-full p-[30px] md:p-[60px]">
-        <div class="max-w-row mx-auto text-white">
-            <div class="slick-slider slick-initialized" dir="ltr">
-                <div class="slick-list">
-                    <div class="success-stories owl-style owl-style-md owl-carousel">
-                        <?php foreach ($image_slider as $value) { ?>
-                            <div data-index="0" class="slick-slide" tabindex="-1" aria-hidden="true"
-                            style="outline: none; width: 288px;">
-                                <div>
-                                    <div tabindex="-1" style="width:100%;display:inline-block">
-                                        <div
-                                            class="">
-                                            <span
-                                                style="box-sizing:border-box;display:inline-block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative;max-width:100%">
-                                                <span
-                                                    style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;max-width:100%">
-                                                    <?php if($value['images']['url']){ ?> 
-                                                    <img
-                                                        style="display:block;max-width:100%;object-fit: cover;object-position: top; width:250px;height:initial;background:none;opacity:1;border:0;border-radius:10px;margin:0;padding:0"
-                                                        alt="" aria-hidden="true"
-                                                        src="<?php echo $value['images']['url']; ?>">
-                                                    <?php } ?>
-
-                                                </span>
-                                                
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
-                    </div>
+        <?php $i=1;
+        foreach ($success_stories as $value) { ?>
+            <button class="btn btn-primary text-bold mt-3" key=<?php echo $i; ?>><?php echo $value['heading']; ?></button>
+        <?php $i++; } ?>
+    </div>
+    <div class="content-tabbing container">
+        <?php $j=1; foreach ($success_stories as $value) { ?>
+            <div class="panel text-center hidden" key="<?php echo $j; ?>">
+                <div class="panel-content">
+                <div class="performer-card row clearfix" id="gallery-section">
+                    <?php foreach ($value['tabing_content'] as $value_content) { ?>
+                        <div class="tab-con col-md-3 col-sm-6 mb-5">
+                            <?php if($value_content['visa']){ ?>
+                                <span class="study_visa"><?php echo $value_content['visa']; ?></span>
+                                 <?php } ?>
+                                <p class="my-1 text-black"><?php echo $value_content['name']; ?></p>
+                                <div class="gallery-image" style="background-image: url('<?php echo $value_content['image']['url']; ?>');"></div>
+                        </div>
+                    <?php } ?>
+                </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
 
+        <?php $j++; } ?>
+    </div>
+
+</div>
 
 <?php get_footer(); ?>

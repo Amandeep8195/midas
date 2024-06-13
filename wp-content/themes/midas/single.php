@@ -24,10 +24,21 @@ get_header(); ?>
             <div class="col-md-4 col-sm-12">
                 <div class="list-group service-list" >
                 	<?php
-                $args = array(
-                    'post_type'      => 'Services',
-                    'posts_per_page' => -1,
-                );
+                    if(is_singular( 'services' )){
+                        $args = array(
+                            'post_type'      => 'Services',
+                            'posts_per_page' => -1,
+                        );
+                    }else{
+                        $args = array(
+                            'post_type'      => 'visa',
+                            'posts_per_page' => -1,
+                        );
+                    }
+                // $args = array(
+                //     'post_type'      => 'Services',
+                //     'posts_per_page' => -1,
+                // );
                 $loop = new WP_Query($args);
                 $i = 1;
                 while ( $loop->have_posts() ) {
