@@ -128,10 +128,10 @@ $footer_logo_text = get_field('footer_logo_text','option');
     <div class="modal-content">
       <div class="modal-body text-center">
         <div class="row">
-            <div class="col-5 p-0">
+            <div class="col-5 d-lg-block d-none p-0">
                 <img src="http://localhost/Midas/wp-content/uploads/2024/06/form-bg.jpg" class="img-fluid form-img" />
             </div>
-            <div class="col p-0">
+            <div class="col p-0 ms-lg-0 ms-2">
                 <?php echo do_shortcode('[contact-form-7 id="e895884" title="Popup form"]'); ?>  <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
         </div>
@@ -174,7 +174,7 @@ jQuery(document).ready(function($) {
     });
 });
 
-            
+
         </script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.0/dist/jquery.min.js"></script> -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
