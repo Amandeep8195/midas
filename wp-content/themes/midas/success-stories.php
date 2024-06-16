@@ -25,8 +25,11 @@ $success_stories = get_field('success_stories');
                             <?php if($value_content['visa']){ ?>
                                 <span class="study_visa"><?php echo $value_content['visa']; ?></span>
                                  <?php } ?>
-                                <p class="my-1 text-black"><?php echo $value_content['name']; ?></p>
-                                <div class="gallery-image" style="background-image: url('<?php echo $value_content['image']['url']; ?>');"></div>
+                                <p class="my-1 text-black h4"><?php echo $value_content['name']; ?></p>
+                                <a href="<?php echo $value_content['image']['url']; ?>" data-fancybox="group">
+                                    <div class="gallery-image mb-3" style="background-image: url('<?php echo $value_content['image']['url']; ?>');"></div>
+                                </a>
+                                <span class="text-black h4"><?php echo $value_content['score']; ?></span>
                         </div>
                     <?php } ?>
                 </div>

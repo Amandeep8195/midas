@@ -884,7 +884,7 @@ function create_posttype() {
             'has_archive' => true,
             'rewrite' => array('slug' => 'services'),
             'show_in_rest' => true,
-  
+  'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
         )
     );
 }
@@ -908,6 +908,7 @@ function visa_posttype() {
             'has_archive' => true,
             'rewrite' => array('slug' => 'visa'),
             'show_in_rest' => true,
+            'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
   
         )
     );

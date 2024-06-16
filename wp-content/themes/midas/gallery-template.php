@@ -15,7 +15,7 @@ get_header();
                         <div class="team-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
                             <div class="inner-box">
                                 <figure class="image-box">
-                                    <a href="<?php echo $value['url']; ?>"><img src="<?php echo $value['url']; ?>"></a>
+                                    <a href="<?php echo $value['url']; ?>" data-fancybox="group"><img src="<?php echo $value['url']; ?>"></a>
                                 </figure>
                             </div>
                         </div>

@@ -120,29 +120,27 @@ $footer_logo_text = get_field('footer_logo_text','option');
             <a href="https://wa.me/+918572877917" id="whatsAppBtn" title="Send a message"><span class="icon-whatsapp"></span></a>
         </div> 
         <!-- .site-wrap -->
-
+ <?php if (is_front_page()){ ?> 
 
 <div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <!--         <h4 class="modal-title">Modal Header</h4> -->
-      </div>
       <div class="modal-body text-center">
-        <h1>Full screen Transparent Bootstrap Modal</h1>
-        <p>FEEL FRREE TO GET YOUR MODAL CODE HERE FOLKS.</p>
-        <a class="pre-order-btn" href="#">GET THE MODAL CODE</a>
-      </div>
-      <div class="modal-footer">
-        <!--         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+        <div class="row">
+            <div class="col-5 p-0">
+                <img src="http://localhost/Midas/wp-content/uploads/2024/06/form-bg.jpg" class="img-fluid form-img" />
+            </div>
+            <div class="col p-0">
+                <?php echo do_shortcode('[contact-form-7 id="e895884" title="Popup form"]'); ?>  <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+        </div>
       </div>
     </div>
 
   </div>
 </div>
-        
+<?php } ?> 
         
         <script type="text/javascript">
             jQuery("body").prepend('<div id="loading-screen"><img src="images/loading-image.gif" alt="loading"></div>');
@@ -160,10 +158,27 @@ $footer_logo_text = get_field('footer_logo_text','option');
             // });
 
 
-   //          $(document).ready(function(){       
-   // $('#myModal').modal('show');
+   //          jQuery(document).ready(function(){       
+   // jQuery('#myModal').modal('show');
    //  }); 
+jQuery(document).ready(function($) {
+    // Check if the cookie 'modalShown' is not set
+    if (document.cookie.indexOf('modalShown=1') === -1) {
+        // If cookie is not set, show the modal
+        $('#myModal').modal('show');
+    }
+
+    // When modal is hidden, set a cookie to prevent it from showing again
+    $('#myModal').on('hidden.bs.modal', function () {
+        document.cookie = 'modalShown=1; path=/';
+    });
+});
+
+            
         </script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.0/dist/jquery.min.js"></script> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 <?php
 	/*

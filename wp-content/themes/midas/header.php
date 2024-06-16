@@ -83,7 +83,13 @@ $headerLogo = get_field('header_logo', 'option');
                     <div class="row mx-1">
                         <div class="col-md-1 col-sm-12"></div>
                         <div class="col-md-8 col-sm-12">
-                            <div class="contact-info text-left"> <span class="mr-1 icon-home"></span> <?php echo $address; ?><a href="mailto:<?php echo $email; ?>"><span class="ml-2 mr-1 icon-envelope-open"></span> <?php echo $email; ?></a></div>
+                            <div class="contact-info text-left"> 
+                                <span class="mr-1 icon-home"></span> <?php echo $address; ?>
+                                <a href="mailto:<?php echo $email; ?>">
+                                <span class="ml-2 mr-1 icon-envelope-open"></span> <?php echo $email; ?></a>
+                                <a href="tel:1800 309 1790">
+                                <span class="ml-2 mr-1 icon-phone-open"></span>1800 309 1790</a>
+                            </div>
                         </div>
                         <div class="col-md-2 col-sm-12">
                             <div class="social-icons text-right">
