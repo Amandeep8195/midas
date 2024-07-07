@@ -8,6 +8,7 @@ get_header(); ?>
 <section class="site-section service-page">
     <div class="container services-names">
         <div class="row">
+            <div class="flex flex-lg-row flex-column justify-content-between gap-3 mt-3 success-stories  owl-carousel">
             <?php
                 $args = array(
                     'post_type'      => 'visa',
@@ -16,15 +17,20 @@ get_header(); ?>
                 $loop = new WP_Query($args);
                 $i = 1;
                 while ( $loop->have_posts() ) {
-                    $loop->the_post(); ?>
-                
-                <?php if($i == 1) { ?> 
-                    <div class="col-md-12 col-sm-12"><a class="btn btn-primary w-100 p-5 mb-3 text-white service-name" id="ielts"  href="<?php echo get_the_permalink(); ?>"><strong><?php echo get_the_title(); ?></strong></a></div>
-                <?php } else{ ?> 
-                    <div class="col-md-6 col-sm-12"><a class="btn btn-primary w-100 p-5 mb-3 text-white service-name" id="pte" href="<?php echo get_the_permalink(); ?>"><strong><?php echo get_the_title(); ?></strong></a></div>
-                <?php } ?>
+                    $loop->the_post(); 
+                 $id = get_the_ID();
+                    $icon = get_field('post_image', $id);?>
+                    <div class="flex align-items-center flag-card">
+                        <?php if($icon){ ?> 
+                            <img decoding="async" src="<?php echo $icon['url']; ?>" alt="Canada" width="60">
+                        <?php }else{ ?> 
+                            <img decoding="async" src="http://localhost/Midas/wp-content/uploads/2024/07/ielts-img.jpg" alt="Canada" width="60">
+                        <?php } ?>
+                        <a class="text-black my-3" href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a>
+                    </div>
                 <?php $i++; ?>
-            <?php } ?>   
+            <?php } ?>
+            </div>   
         </div>
     </div>
 

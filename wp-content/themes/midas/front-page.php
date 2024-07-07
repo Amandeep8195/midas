@@ -122,21 +122,25 @@ $gallery = get_field('gallery');
                 $loop = new WP_Query($args);
                 while ( $loop->have_posts() ) {
                     $loop->the_post();
+                    $id = get_the_ID();
+                    $icon = get_field('icon_image', $id);
                     ?>
                      <div
                     class="service-content service-card max-w-180 lg:min-w-[272px] md:min-w-220 h-20 md:h-52 bg-pink-gradient flex justify-between md:flex-col items-center rounded-10 py-2 px-4 md:pt-8 md:pb-7 cursor-pointer mx-auto">
                     <a href="<?php echo get_the_permalink(); ?>"></a>
                         <div class="flex flex-col justify-between align-items-center">
-                            <div class="w-35px md:w-73 md:mb-[6px]"><span
-                                    style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
-                                        style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:100%"></span><img
-                                        alt="link-icon"
-                                        src="http://localhost/Midas/wp-content/uploads/2024/05/1.webp"
-                                        decoding="async" data-nimg="responsive"
-                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
-                                        sizes="100vw"
-                                        ></span>
-                            </div>
+                            <?php if($icon){ ?> 
+                                <div class="w-35px md:w-73 md:mb-[6px]"><span
+                                        style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
+                                            style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:100%"></span><img
+                                            alt="link-icon"
+                                            src="<?php echo $icon['url'];  ?>"
+                                            decoding="async" data-nimg="responsive"
+                                            style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;width:70px;height:70px;object-fit:contain"
+                                            sizes="100vw"
+                                            ></span>
+                                </div>
+                            <?php } ?>
                             <h3 class="text-xs font-bold md:text-font22 text-center"><?php echo get_the_title(); ?></h3>
                         </div>
                         <div
@@ -157,9 +161,9 @@ $gallery = get_field('gallery');
                                     style="box-sizing:border-box;display:block;overflow:hidden;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;position:relative"><span
                                         style="box-sizing:border-box;display:block;width:initial;height:initial;background:none;opacity:1;border:0;margin:0;padding:0;padding-top:100%"></span><img
                                         alt="link-icon"
-                                        src="http://localhost/Midas/wp-content/uploads/2024/05/1.webp"
+                                        src="http://localhost/Midas/wp-content/uploads/2024/06/services_icon_1.png"
                                         decoding="async" data-nimg="responsive"
-                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
+                                        style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;width:70px;height:70px;object-fit:contain"
                                         sizes="100vw"
                                         ></span>
                             </div>
@@ -301,9 +305,9 @@ $gallery = get_field('gallery');
 <section class="site-section mt-3" id="feature-section">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6 text-lg-center text-start mb-lg-5 mb-0">
+            <div class="col-lg-6 text-center mb-lg-5 mb-0">
                 <?php if($why_choose_heading){ ?> 
-                    <h2 class="text-black mb-2 text-uppercase font-bold"><?php echo $why_choose_heading; ?></h2>
+                    <h2 class="text-black mb-2 text-uppercase font-bold flex flex-col flex-lg-row justify-center align-items-center gap-2"><?php echo $why_choose_heading; ?></h2>
                 <?php } ?>
                 <?php if($why_choose_sub_heading){ 
                     echo $why_choose_sub_heading;

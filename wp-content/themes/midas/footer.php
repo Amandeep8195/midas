@@ -51,7 +51,7 @@ $footer_logo_text = get_field('footer_logo_text','option');
                                         'menu_class'           => 'list-unstyled', ) ); 
                             ?>
                         </div>
-                        <div class="col-md-2 col-xs-12">
+                        <div class="col-md-auto col-xs-12">
                             <?php if($follow_us_section){ ?> 
                                 <div class="mb-4">
                                     <?php if($follow_us_section['follow_us_heading']){ ?> 
@@ -61,6 +61,7 @@ $footer_logo_text = get_field('footer_logo_text','option');
                                     <a href="<?php echo $follow_us_section['instagram_link']; ?>" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                                     <a href="<?php echo $follow_us_section['youtube_link']; ?>" target="_blank" class="pl-3 pr-3"><span class="icon-youtube"></span></a>
                                     <a href="<?php echo $follow_us_section['google_link'] ?>" target="_blank" class="pl-3 pr-3"><span class="icon-google"></span></a>
+                                    <a href="" target="_blank" class="pl-3 pr-3"><span class="icon-whatsapp"></span></a>
                                 </div>
                             <?php } ?>
                             <?php if($contact_us_section){ ?> 

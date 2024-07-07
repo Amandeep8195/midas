@@ -85,10 +85,10 @@ $headerLogo = get_field('header_logo', 'option');
                         <div class="col-md-8 col-sm-12">
                             <div class="contact-info text-left"> 
                                 <span class="mr-1 icon-home"></span> <?php echo $address; ?>
-                                <a href="mailto:<?php echo $email; ?>">
-                                <span class="ml-2 mr-1 icon-envelope-open"></span> <?php echo $email; ?></a>
-                                <a href="tel:1800 309 1790">
-                                <span class="ml-2 mr-1 icon-phone-open"></span>1800 309 1790</a>
+                               <!--  <a href="mailto:<?php //echo $email; ?>">
+                                <span class="ml-2 mr-1 icon-envelope-open"></span> <?php// echo $email; ?></a> -->
+                                    <a href="tel:1800 309 1790" class="phone-div">Call now: 
+                                    <span class="ml-2 mr-1 icon-phone-open"></span>1800 309 1790</a>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-12">
@@ -97,6 +97,7 @@ $headerLogo = get_field('header_logo', 'option');
                                 <a href="<?php echo $instagram_link; ?>" target="_blank"><span class="mr-3 icon-instagram"></span></a>
                                 <a href="<?php echo $youtube_link; ?>" target="_blank"><span class="mr-3 icon-youtube"></span></a>
                                 <a href="<?php echo $google_link; ?>" target="_blank"><span class="mr-3 icon-google"></span></a>
+                                <a href="" target="_blank"><span class="mr-3 icon-whatsapp"></span></a>
                             </div>
                         </div>
                     </div>
