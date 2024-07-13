@@ -83,15 +83,21 @@ $headerLogo = get_field('header_logo', 'option');
                     <div class="row mx-1">
                         <div class="col-md-1 col-sm-12"></div>
                         <div class="col-md-8 col-sm-12">
-                            <div class="contact-info text-left"> 
-                                <span class="mr-1 icon-home"></span> <?php echo $address; ?>
-                               <!--  <a href="mailto:<?php //echo $email; ?>">
-                                <span class="ml-2 mr-1 icon-envelope-open"></span> <?php// echo $email; ?></a> -->
-                                    <a href="tel:1800 309 1790" class="phone-div">Call now: 
-                                    <span class="ml-2 mr-1 icon-phone-open"></span>1800 309 1790</a>
+                            <div class="contact-info text-left">
+                                <div class="addressContainer">
+                                    <div class="address">
+                                        <span class="mr-1 icon-home"></span> <?php echo $address; ?>
+                                       <!--  <a href="mailto:<?php //echo $email; ?>">
+                                        <span class="ml-2 mr-1 icon-envelope-open"></span> <?php// echo $email; ?></a> -->
+                                    </div>
+                                    <div class="callNowContainer">
+                                        <a href="tel:1800 309 1790" class="phone-div">Call now: 
+                                        <span class="ml-2 mr-1 icon-phone-open"></span>1800 309 1790</a>
+                                    </div>  
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-12">
+                        <div class="col-md-2 col-sm-12 d-xl-block d-none">
                             <div class="social-icons text-right">
                                 <a href="<?php echo $facebook_link; ?>" target="_blank"><span class="mr-3 icon-facebook"></span></a>
                                 <a href="<?php echo $instagram_link; ?>" target="_blank"><span class="mr-3 icon-instagram"></span></a>
@@ -135,7 +141,21 @@ $headerLogo = get_field('header_logo', 'option');
                     </div>
                 </div>
             </header>
+            <?php $banner_image_mobile = get_field('banner_image_mobile', get_the_ID()); 
+                // $mobile_img = $banner_image_mobile['url']; 
 
+                if(!empty($banner_image_mobile)){ 
+                ?>
+            <style type="text/css">
+                @media only screen and (max-width: 786px) {
+                    #background_img {
+                       background-image: url('<?php echo $banner_image_mobile['url']; ?>') !important ;
+                       background-size: contain;
+                    }
+
+                }
+            </style>
+            <?php } ?>
             <?php if (!is_front_page()){ ?> 
                  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
                 <?php if($image){ ?>

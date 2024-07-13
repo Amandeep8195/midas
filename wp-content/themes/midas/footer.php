@@ -118,7 +118,7 @@ $footer_logo_text = get_field('footer_logo_text','option');
                     </div>
                 </div>
             </footer>
-            <a href="https://wa.me/+918572877917" id="whatsAppBtn" title="Send a message"><span class="icon-whatsapp"></span></a>
+            <a href="https://www.whatsapp.com/channel/0029VaGicvVIyPtShFbbhi3X" id="whatsAppBtn" title="Send a message"><span class="icon-whatsapp"></span></a>
         </div> 
         <!-- .site-wrap -->
  <?php if (is_front_page()){ ?> 

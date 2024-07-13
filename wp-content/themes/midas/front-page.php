@@ -229,7 +229,7 @@ $gallery = get_field('gallery');
                                 <div>
                                     <div tabindex="-1" style="width:100%;display:inline-block">
                                         <div
-                                            class="w-[290px] h-[286px] md:w-[280px] md:h-[430px] mx-auto mb-[20px] md:mb-0 mt-1">
+                                            class="w-[290px] md:w-[280px] md:h-[430px] mx-auto mb-[20px] md:mb-0 mt-1">
                                             <a href="<?php echo $value['images']['url']; ?>" data-fancybox="group">
                                             <p><img src="<?php echo $value['images']['url']; ?>"></p>
                                             </a>

@@ -78,14 +78,20 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                     <div class="row mx-1">
                         <div class="col-md-1 col-sm-12"></div>
                         <div class="col-md-8 col-sm-12">
-                            <div class="contact-info text-left"> 
-                                <span class="mr-1 icon-home"></span> 1293 A/1 Manauli House, Prem Nagar Bus Stop, Ambala City 134003 |                               <!--  <a href="mailto:">
-                                <span class="ml-2 mr-1 icon-envelope-open"></span> <?php// echo $email; ?></a> -->
-                                    <a href="tel:1800 309 1790" class="phone-div">Call now: 
-                                    <span class="ml-2 mr-1 icon-phone-open"></span>1800 309 1790</a>
+                            <div class="contact-info text-left">
+                                <div class="addressContainer">
+                                    <div class="address">
+                                        <span class="mr-1 icon-home"></span> 1293 A/1 Manauli House, Prem Nagar Bus Stop, Ambala City 134003 |                                       <!--  <a href="mailto:">
+                                        <span class="ml-2 mr-1 icon-envelope-open"></span> <?php// echo $email; ?></a> -->
+                                    </div>
+                                    <div class="callNowContainer">
+                                        <a href="tel:1800 309 1790" class="phone-div">Call now: 
+                                        <span class="ml-2 mr-1 icon-phone-open"></span>1800 309 1790</a>
+                                    </div>  
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-12">
+                        <div class="col-md-2 col-sm-12 d-xl-block d-none">
                             <div class="social-icons text-right">
                                 <a href="https://www.facebook.com/midastouch.ambala/" target="_blank"><span class="mr-3 icon-facebook"></span></a>
                                 <a href="https://www.instagram.com/midastouchambala/?igsh=NXh3MmpsZzN2ZDhr" target="_blank"><span class="mr-3 icon-instagram"></span></a>
@@ -129,12 +135,11 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                     </div>
                 </div>
             </header>
-
-             
+                         
                  <br>
 <font size="1"><table class="xdebug-error xe-warning" dir="ltr" border="1" cellspacing="0" cellpadding="1">
 <tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Warning: Attempt to read property "ID" on null in F:\wamp64\www\midas\wp-content\themes\midas\header.php on line <i>140</i>
+<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Warning: Attempt to read property "ID" on null in F:\wamp64\www\midas\wp-content\themes\midas\header.php on line <i>160</i>
 </th></tr>
 <tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
 <tr>
@@ -146,56 +151,56 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 </tr>
 <tr>
 <td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0003</td>
+<td bgcolor="#eeeeec" align="center">0.0001</td>
 <td bgcolor="#eeeeec" align="right">361416</td>
 <td bgcolor="#eeeeec">{main}(  )</td>
 <td title="F:\wamp64\www\midas\index.php" bgcolor="#eeeeec">...\index.php<b>:</b>0</td>
 </tr>
 <tr>
 <td bgcolor="#eeeeec" align="center">2</td>
-<td bgcolor="#eeeeec" align="center">0.0004</td>
+<td bgcolor="#eeeeec" align="center">0.0001</td>
 <td bgcolor="#eeeeec" align="right">361728</td>
 <td bgcolor="#eeeeec">require( <font color="#00bb00">'F:\wamp64\www\midas\wp-blog-header.php</font> )</td>
 <td title="F:\wamp64\www\midas\index.php" bgcolor="#eeeeec">...\index.php<b>:</b>17</td>
 </tr>
 <tr>
 <td bgcolor="#eeeeec" align="center">3</td>
-<td bgcolor="#eeeeec" align="center">0.0933</td>
+<td bgcolor="#eeeeec" align="center">0.0977</td>
 <td bgcolor="#eeeeec" align="right">4581928</td>
 <td bgcolor="#eeeeec">require_once( <font color="#00bb00">'F:\wamp64\www\midas\wp-includes\template-loader.php</font> )</td>
 <td title="F:\wamp64\www\midas\wp-blog-header.php" bgcolor="#eeeeec">...\wp-blog-header.php<b>:</b>19</td>
 </tr>
 <tr>
 <td bgcolor="#eeeeec" align="center">4</td>
-<td bgcolor="#eeeeec" align="center">0.0951</td>
+<td bgcolor="#eeeeec" align="center">0.1004</td>
 <td bgcolor="#eeeeec" align="right">4583936</td>
 <td bgcolor="#eeeeec">include( <font color="#00bb00">'F:\wamp64\www\midas\wp-content\themes\midas\404.php</font> )</td>
 <td title="F:\wamp64\www\midas\wp-includes\template-loader.php" bgcolor="#eeeeec">...\template-loader.php<b>:</b>106</td>
 </tr>
 <tr>
 <td bgcolor="#eeeeec" align="center">5</td>
-<td bgcolor="#eeeeec" align="center">0.0951</td>
+<td bgcolor="#eeeeec" align="center">0.1004</td>
 <td bgcolor="#eeeeec" align="right">4583936</td>
 <td bgcolor="#eeeeec">get_header( <span>$name = </span>???, <span>$args = </span>??? )</td>
 <td title="F:\wamp64\www\midas\wp-content\themes\midas\404.php" bgcolor="#eeeeec">...\404.php<b>:</b>10</td>
 </tr>
 <tr>
 <td bgcolor="#eeeeec" align="center">6</td>
-<td bgcolor="#eeeeec" align="center">0.0951</td>
+<td bgcolor="#eeeeec" align="center">0.1005</td>
 <td bgcolor="#eeeeec" align="right">4584312</td>
 <td bgcolor="#eeeeec">locate_template( <span>$template_names = </span><span>[0 =&gt; &#39;header.php&#39;]</span>, <span>$load = </span><span>TRUE</span>, <span>$load_once = </span><span>TRUE</span>, <span>$args = </span><span>[]</span> )</td>
 <td title="F:\wamp64\www\midas\wp-includes\general-template.php" bgcolor="#eeeeec">...\general-template.php<b>:</b>48</td>
 </tr>
 <tr>
 <td bgcolor="#eeeeec" align="center">7</td>
-<td bgcolor="#eeeeec" align="center">0.0951</td>
+<td bgcolor="#eeeeec" align="center">0.1005</td>
 <td bgcolor="#eeeeec" align="right">4584392</td>
 <td bgcolor="#eeeeec">load_template( <span>$_template_file = </span><span>&#39;F:\\wamp64\\www\\midas/wp-content/themes/midas/header.php&#39;</span>, <span>$load_once = </span><span>TRUE</span>, <span>$args = </span><span>[]</span> )</td>
 <td title="F:\wamp64\www\midas\wp-includes\template.php" bgcolor="#eeeeec">...\template.php<b>:</b>745</td>
 </tr>
 <tr>
 <td bgcolor="#eeeeec" align="center">8</td>
-<td bgcolor="#eeeeec" align="center">0.0952</td>
+<td bgcolor="#eeeeec" align="center">0.1005</td>
 <td bgcolor="#eeeeec" align="right">4585032</td>
 <td bgcolor="#eeeeec">require_once( <font color="#00bb00">'F:\wamp64\www\midas\wp-content\themes\midas\header.php</font> )</td>
 <td title="F:\wamp64\www\midas\wp-includes\template.php" bgcolor="#eeeeec">...\template.php<b>:</b>810</td>
@@ -331,7 +336,7 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
                     </div>
                 </div>
             </footer>
-            <a href="https://wa.me/+918572877917" id="whatsAppBtn" title="Send a message"><span class="icon-whatsapp"></span></a>
+            <a href="https://www.whatsapp.com/channel/0029VaGicvVIyPtShFbbhi3X" id="whatsAppBtn" title="Send a message"><span class="icon-whatsapp"></span></a>
         </div> 
         <!-- .site-wrap -->
   
