@@ -97,7 +97,7 @@ $headerLogo = get_field('header_logo', 'option');
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2 col-sm-12 d-xl-block d-none">
+                        <div class="col-md-2 col-sm-12 d-xl-block">
                             <div class="social-icons text-right">
                                 <a href="<?php echo $facebook_link; ?>" target="_blank"><span class="mr-3 icon-facebook"></span></a>
                                 <a href="<?php echo $instagram_link; ?>" target="_blank"><span class="mr-3 icon-instagram"></span></a>
@@ -147,11 +147,12 @@ $headerLogo = get_field('header_logo', 'option');
                 if(!empty($banner_image_mobile)){ 
                 ?>
             <style type="text/css">
-                @media only screen and (max-width: 786px) {
+                @media only screen and (max-width: 567px) {
                     #background_img {
                        background-image: url('<?php echo $banner_image_mobile['url']; ?>') !important ;
                        background-size: contain;
                     }
+
 
                 }
             </style>

@@ -21,11 +21,13 @@ get_header(); ?>
                  $id = get_the_ID();
                     $icon = get_field('post_image', $id);?>
                     <div class="flex align-items-center flag-card">
+                        <a class="text-black my-3" href="<?php echo get_the_permalink(); ?>">
                         <?php if($icon){ ?> 
                             <img decoding="async" src="<?php echo $icon['url']; ?>" alt="Canada" width="60">
                         <?php }else{ ?> 
                             <img decoding="async" src="http://localhost/Midas/wp-content/uploads/2024/07/ielts-img.jpg" alt="Canada" width="60">
                         <?php } ?>
+                    </a>
                         <a class="text-black my-3" href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a>
                     </div>
                 <?php $i++; ?>
